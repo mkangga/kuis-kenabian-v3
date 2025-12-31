@@ -80,7 +80,7 @@ const Game: React.FC<GameProps> = ({
       <div className="perspective-1000 w-full mb-10 group">
         <div 
           className={cardClass}
-          onClick={() => !isFlipped && onFlip()}
+          onClick={onFlip}
         >
           {/* Front Side (Question) */}
           <div className={frontClass}>
@@ -104,6 +104,9 @@ const Game: React.FC<GameProps> = ({
             <h3 className="text-2xl md:text-4xl font-extrabold text-white leading-relaxed max-w-lg drop-shadow-md">
               {currentQuestion?.a}
             </h3>
+            <div className="absolute bottom-8 text-white/70 text-sm font-semibold flex items-center gap-2 animate-pulse transition-colors hover:text-white">
+              <RotateCw className="w-4 h-4" /> Ketuk untuk balik
+            </div>
           </div>
         </div>
       </div>

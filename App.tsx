@@ -238,7 +238,7 @@ const App = () => {
               totalInitial={totalInitialQuestions}
               categoryId={selectedCategory}
               isFlipped={isFlipped}
-              onFlip={() => setIsFlipped(true)}
+              onFlip={() => setIsFlipped(prev => !prev)}
               onSkip={handleSkip}
               onAnswer={handleAnswer}
               streak={streak}
